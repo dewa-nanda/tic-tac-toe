@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-const Player = ({ playerName = 'Guest', symbol }) => {
+const Player = ({ playerName = 'Guest', symbol, isActive }) => {
     const [name, setName] = useState(playerName);
     const [isEdit, setIsEdit] = useState(false);
-    const [active, setIsActive] = useState();
+
+    const activeStyle = isActive == true && 'border-2';
 
     const typingHandler = (e) => {
         setName(e.target.value);
@@ -14,14 +15,14 @@ const Player = ({ playerName = 'Guest', symbol }) => {
         if(name == '') {
             alert('Nama Player Tidak Boleh Kosong');
         }else{
-            isEdit !== true ? setIsActive('border-2') : setIsActive('');
+            // isEdit !== true ? setIsActive('border-2') : setIsActive('');
             setIsEdit((prev) => !prev);
         }
     };
 
     return (
     <div className={`flex flex-wrap gap-1 p-3 basis-2/4 justify-around text-2xl border-zinc-900 rounded-lg
-    ${active}`}>
+    ${activeStyle}`}>
         {isEdit ? 
             <input 
                 className="salsa-regular w-1/2  bg-[#F2E8DC] border-b-2 border-b-zinc-900 focus:outline-none" 
