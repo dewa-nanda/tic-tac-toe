@@ -16,6 +16,7 @@ const GameBoard = ({onClickGameBoard, symbolActive}) => {
             return updatedBoard;
         });
 
+        console.log(gameBoard);
         onClickGameBoard();
     }
 
