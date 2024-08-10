@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 const Log = ({turns}) => {
+    let isActive = 'w-full lg:w-1/5 lg:mx-auto bg-[#F2E8DC] text-[#595248] mt-5 rounded-md p-2 ';
+
+    if(turns.length === 0){
+        isActive += 'hidden';
+    }
+
     return (
-        <div className="w-full lg:w-1/5 lg:mx-auto bg-[#F2E8DC] text-[#595248] mt-5 rounded-md p-2 ">
+        <div className={isActive}>
             <h1 className="font-bold text-center text-2xl pb-2 border-b-2 border-amber-950">Log Player</h1>
             <div className="flex flex-col-reverse">
                 {turns.map((turn, index) => {
