@@ -20,7 +20,14 @@ const GameBoard = ({onSelectSquare, turns}) => {
             {gameBoard.map((row, rowIndex) => (
                 <div className="grid grid-cols-3 gap-1 h-3/6" key={rowIndex}>
                     {row.map((playerSymbol, colIndex) => (
-                        <button className="border-2 border-amber-950 rounded-lg text-7xl salsa-regular" key={colIndex} onClick={() => onSelectSquare(rowIndex, colIndex)}>{playerSymbol}</button>
+                        <button 
+                            className="border-2 border-amber-950 rounded-lg text-7xl salsa-regular" 
+                            key={colIndex} 
+                            onClick={() => onSelectSquare(rowIndex, colIndex)}
+                            disabled={playerSymbol !== null}
+                        >
+                                {playerSymbol}
+                        </button>
                     ))}
                 </div>
             ))}

@@ -5,7 +5,7 @@ const Player = ({ playerName = 'Guest', symbol, isActive }) => {
     const [name, setName] = useState(playerName);
     const [isEdit, setIsEdit] = useState(false);
 
-    const activeStyle = isActive == true && 'border-2';
+    const activeStyle = isActive == true && 'border-2 animate-pulse';
 
     const typingHandler = (e) => {
         setName(e.target.value);
@@ -15,7 +15,6 @@ const Player = ({ playerName = 'Guest', symbol, isActive }) => {
         if(name == '') {
             alert('Nama Player Tidak Boleh Kosong');
         }else{
-            // isEdit !== true ? setIsActive('border-2') : setIsActive('');
             setIsEdit((prev) => !prev);
         }
     };
