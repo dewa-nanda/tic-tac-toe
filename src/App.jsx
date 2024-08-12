@@ -6,7 +6,12 @@ import GameOver from "./components/GameOver";
 
 import { WINNING_COMBINATIONS } from "./Data/winning-combinations";
 
-const initialGameBoard = [
+const PLAYER = {
+  'X' : 'Player 1',
+  'O' : 'Player 2'
+}
+
+const INITIAL_GAME_BOARD = [
   [null, null, null],
   [null, null, null],
   [null, null, null],
@@ -27,7 +32,7 @@ function App() {
 
   const activePlayer = deriveActivePlayer(gameTurns);
   let winner = null;
-  let gameBoard = initialGameBoard;
+  let gameBoard = [...INITIAL_GAME_BOARD.map(array => [...array])];
 
   for (const turn of gameTurns) {
       const {square, player} = turn;
@@ -46,7 +51,7 @@ function App() {
       firstSquareSymbol === secondSquareSymbol &&
       firstSquareSymbol === thirdSquareSymbol
     ) {
-      winner = firstSquareSymbol;
+      winner = PLAYER[firstSquareSymbol];
     }
   };
 
@@ -65,19 +70,23 @@ function App() {
     
   }
 
+  const handleResetGame = () => {
+    setGameTurns([]);
+  }
+
   return (
     <>
       <section className="w-full lg:w-6/12 lg:mx-auto bg-[#F2E8DC] text-[#595248] mt-5 rounded-md">
         <div className="flex flex-col md:flex-row p-3">
-          <Player playerName="Player 1" symbol="X" isActive={activePlayer === 'X'}/>
-          <Player playerName="Player 2" symbol="O" isActive={activePlayer === 'O'}/>
+          <Player playerName={PLAYER['X']} symbol="X" isActive={activePlayer === 'X'}/>
+          <Player playerName={PLAYER['O']} symbol="O" isActive={activePlayer === 'O'}/>
         </div>
 
         <GameBoard 
           onSelectSquare={handleSelectedSquare} 
           board={gameBoard} 
         />
-        {winner && <GameOver winner={winner} />}
+        {winner && <GameOver winner={winner} onGameReset={handleResetGame} />}
       </section>
       <Log turns={gameTurns} />
     </>
