@@ -9,16 +9,16 @@
 }
   
 @keyframes slide-in-from-left {
-    0% {
-      opacity: 0;
-      transform: translateX(-30%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
   
 .slide-in-text {
-    animation: slide-in-from-left 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation: slide-in-from-left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
