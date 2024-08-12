@@ -26,7 +26,7 @@ function App() {
   const [gameTurns, setGameTurns] = useState([]);
 
   const activePlayer = deriveActivePlayer(gameTurns);
-
+  let winner = null;
   let gameBoard = initialGameBoard;
 
   for (const turn of gameTurns) {
@@ -35,8 +35,6 @@ function App() {
 
       gameBoard[row][col] = player;
   }
-  
-  let winner = null;
 
   for (const combination of WINNING_COMBINATIONS) {
     const firstSquareSymbol = gameBoard[combination[0].row][combination[0].column];
