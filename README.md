@@ -1,24 +1,49 @@
-# Permainan Tic-Tac-Toe dengan React
 
-## Pengantar
+# Tic-Tac-Toe Game (React)
+A simple Tic-Tac-Toe game built using React, showcasing the use of components, props, and state management. It allows two players to compete on a 3x3 grid, displaying game status and providing a reset functionality to start over.
 
-Proyek ini adalah implementasi sederhana dari permainan klasik Tic-Tac-Toe menggunakan React. Aplikasi ini menunjukkan penggunaan `useState` dalam React untuk mengelola state permainan serta penanganan `props` untuk mengirim data antar komponen.
+## Features
+- Interactive Tic-Tac-Toe board
+- Two-player functionality
+- Turn-based game system
+- Display game status (turn/winner)
+- Reset game option
 
-## Fitur
+## Tech Stack
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite)](https://skillicons.dev)
+- **React**: JavaScript library for UI components
+- **Tailwind CSS**: For styling and layout
+- **Vite**: Fast development environment and build tool for React projects
 
-- Papan permainan Tic-Tac-Toe yang interaktif.
-- Permainan bergiliran antara dua pemain.
-- Pengelolaan state permainan menggunakan React `useState`.
-- Menampilkan status permainan (giliran pemain atau pemenang).
-- Kemampuan untuk mereset permainan dan bermain lagi.
+## Demo
+Check out the live version of the game [here](https://tic-tac-toe-ketapp.netlify.app/).
 
-## Teknologi yang Digunakan
+## Project Setup
+To run the project locally, follow these steps.
 
-- **React**: Pustaka JavaScript untuk membangun antarmuka pengguna.
-- **useState Hook**: Hook dalam React yang memungkinkan Anda menambahkan state ke komponen fungsional.
-- **Penanganan Props**: Mekanisme untuk mengirim data dari satu komponen ke komponen lainnya dalam React.
+### Prerequisites
+Ensure you have the following installed on your machine:
+- Node.js (version 14.x or higher)
+- npm (Node package manager)
 
-## Cara Menjalankan
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dewa-nanda/tic-tac-toe
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd tic-tac-toe
+   ```
+3. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+   The game will be available on `http://localhost:3000`.
 
-1. **Gunakan Link dibawah Ini**:
-   https://tic-tac-toe-ketapp.netlify.app/
+## License
+This project is licensed under the MIT License.
