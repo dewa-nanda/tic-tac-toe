@@ -10,10 +10,11 @@ A simple Tic-Tac-Toe game built using React, showcasing the use of components, p
 - Reset game option
 
 ## Tech Stack
-[![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite,netlify)](https://skillicons.dev)
 - **React**: JavaScript library for UI components
 - **Tailwind CSS**: For styling and layout
 - **Vite**: Fast development environment and build tool for React projects
+- **Netlify**: Used for deploying the live version of the project
 
 ## Demo
 Check out the live version of the game [here](https://tic-tac-toe-ketapp.netlify.app/).
